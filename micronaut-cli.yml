@@ -1,0 +1,6 @@
+applicationType: default
+defaultPackage: name.davidwbrown
+testFramework: spock
+sourceLanguage: java
+buildTool: maven
+features: [ annotation-api, app-name, http-client, java, java-application, logback, maven, readme, shade, spock, tomcat-server, yaml ]
