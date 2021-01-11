@@ -54,9 +54,14 @@ add [DANNON, -200 points, 10/31 3PM] to user
 add [MILLER COORS, 10,000 points , 11/1 2PM] to user
 add [DANNON, 1000 points 11/2 2PM] to user
 
+Example client:
+`curl -X GET http://localhost:8080/balance/add/MILLER+COORS/10000/11/1+2PM`
+
 Then you call your deduct points route with the following request:
 
 deduct 5000 points from user
+
+Example client: `curl -X GET http://localhost:8080/balance/deduct/DANNON/200/`
 
 The expected response from the deduct call would be:
 
@@ -68,6 +73,8 @@ A subsequent query to the points balance route, after the deduction, should retu
 DANNON, 1000 points
 UNILEVER, 0 points
 MILLER COORS, 5,300 points
+
+Example client: `curl -X GET http://localhost:8080/balance`
 
 ## How do I submit it?
 
